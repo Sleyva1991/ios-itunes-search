@@ -29,21 +29,24 @@
                                         <segment title="Movies"/>
                                     </segments>
                                 </segmentedControl>
-                                <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Shl-6D-K9V">
-                                    <rect key="frame" x="0.0" y="49" width="414" height="56"/>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Shl-6D-K9V">
+                                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Shl-6D-K9V" firstAttribute="top" secondItem="Iab-24-LM5" secondAttribute="bottom" constant="13" id="6Kg-Lu-zvf"/>
                                 <constraint firstAttribute="trailing" secondItem="Iab-24-LM5" secondAttribute="trailing" constant="8" id="PeP-Wz-Kio"/>
                                 <constraint firstItem="Iab-24-LM5" firstAttribute="leading" secondItem="AYz-OV-C7l" secondAttribute="leading" constant="8" id="Wsj-Aw-ihx"/>
+                                <constraint firstAttribute="bottom" secondItem="Shl-6D-K9V" secondAttribute="bottom" id="Xhm-4G-eD5"/>
+                                <constraint firstAttribute="trailing" secondItem="Shl-6D-K9V" secondAttribute="trailing" id="cZ2-Ll-CuD"/>
+                                <constraint firstItem="Shl-6D-K9V" firstAttribute="top" secondItem="Iab-24-LM5" secondAttribute="bottom" constant="8" id="chP-Y4-lmA"/>
+                                <constraint firstItem="Shl-6D-K9V" firstAttribute="leading" secondItem="AYz-OV-C7l" secondAttribute="leading" id="jnx-D8-BGs"/>
                                 <constraint firstItem="Iab-24-LM5" firstAttribute="top" secondItem="AYz-OV-C7l" secondAttribute="top" constant="8" id="ydI-n2-wor"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="J8g-ya-nN2" detailTextLabel="C8g-Kf-9V2" style="IBUITableViewCellStyleSubtitle" id="QeL-Cf-biY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="iTunesCell" textLabel="J8g-ya-nN2" detailTextLabel="C8g-Kf-9V2" style="IBUITableViewCellStyleSubtitle" id="QeL-Cf-biY">
                                 <rect key="frame" x="0.0" y="128" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QeL-Cf-biY" id="ZXU-aM-IRY">
