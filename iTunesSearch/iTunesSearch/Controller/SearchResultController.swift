@@ -34,7 +34,35 @@ class SearchResultController {
         
         let request = URLRequest(url: requestURL)
         
-        URLSession.shared.dataTask(with: <#T##URL#>)
+        // Perform the request (with a data task)
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            
+            // Handle any errors
+            
+            if let error = error {
+                NSLog("Error fetching data: \(error)")
+                return
+            }
+            
+            // (Usually) decode the data
+            
+            guard let data = data else {
+                NSLog("No data returned from iTunes search")
+                completion(error)
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let resultsSearch = try decoder.decode(searchResults.self, from: data)
+                self.searchResult = resultsSearch.results
+            } catch {
+                NSLog("Unable to decode data into searchResult: \(error)")
+            }
+            completion(error)
+        }.resume()
         
     }
 }
